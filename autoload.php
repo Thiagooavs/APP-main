@@ -8,7 +8,7 @@ spl_autoload_register(function($nome_da_classe)
     {
         include $arquivo;
 
-    }else throw new exception("arquivo não encontrado")
+    }else throw new exception("arquivo não encontrado");
         
     
 
