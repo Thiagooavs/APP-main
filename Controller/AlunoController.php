@@ -75,7 +75,7 @@ final class AlunoContuoller extends Controller
 
         }catch(Exception $e)
         {
-            $model -> serError("Ocorreu um erro ao buscat os alunos:");
+            $model -> serError("Ocorreu um erro ao buscar os alunos:");
             $model -> setError($e ->getMessage());
 
         }

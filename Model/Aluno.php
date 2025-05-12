@@ -31,7 +31,7 @@ final class Aluno extends Model
             throw new exception("Preencha o RA");
 
 
-            $this ->RA =>$value;
+            $this ->RA ->$value;
         }
 
         get => $this -> RA ?? null;
@@ -43,7 +43,7 @@ final class Aluno extends Model
             if(strlen($value) < 3)
             throw new Exception("Curso deve ter no mínimo 3 caracteres");
 
-            $this ->Curso => $value;
+            $this ->Curso -> $value;
         }
 
         get => $this -> Curso ??null;
