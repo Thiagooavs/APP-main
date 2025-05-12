@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sistemas Biblioteca - Cadastro de Usuario</title>
+    <title>Sistemas Biblioteca - Cadastro de Categorias</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
@@ -13,9 +13,9 @@
     <div>
         <?php include VIEWS . '/Includes/menu.php' ?>
 
-        <h1>Lista de Usuarios</h1>
+        <h1>Lista de Categorias</h1>
 
-        <a href="/Usuario/cadastro">Novo Usuario</a>
+        <a href="/categoria/cadastro">Nova categoria</a>
 
         <?= $model->getErrors() ?>
 
@@ -23,19 +23,16 @@
             <thead>
                 <tr>
                     <th scope="col">Id</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Senha</th>
+                    <th scope="col">Categoria</th>
+                    
                 </tr>
             </thead>
             <tbody>
-                <?php foreach($model->rows as $Usuario): ?>
+                <?php foreach($model->rows as $categoria): ?>
                 <tr>
-                    <td> <?= $Usuario->Id ?> </td>
-                    <td> <a href="/Usuario/cadastro?id=<?= $Usuario->Id ?>"><?= $Usuario->Nome ?></a> </td>
-                    <td> <?= $Usuario->email ?> </td>
-                    <td> <?= $Usuario->senha ?> </td>
-                    <td> <a href="/Usuario/delete?id=<?= $Usuario->Id ?>">Remover</a> </td>
+                    <td> <?= $categoria->Id ?> </td>
+                    <td> <a href="/categoria/cadastro?id=<?= $aluno->Id ?>"><?= $aluno->Descricao ?></a> </td>
+                    <td> <a href="/categoria/delete?id=<?= $aluno->Id ?>">Remover</a> </td>
                 </tr>
                 <?php endforeach ?>
             </tbody>
